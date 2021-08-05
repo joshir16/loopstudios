@@ -11,6 +11,13 @@
 
   @include flex-box;
   justify-content: space-between;
+
+  @media only screen and (max-width: $bp-huge) {
+    padding: 5rem 10rem;
+  }
+  @media only screen and (max-width: $bp-largest) {
+    padding: 5rem 7rem;
+  }
 }
 
 .navbar {
@@ -22,6 +29,10 @@
     list-style: none;
     &:not(:last-child) {
       margin-right: 5rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 2rem;
+      }
     }
   }
 
@@ -31,5 +42,28 @@
     font-weight: 400;
     color: #fff;
     text-decoration: none;
+    padding: 0.5rem;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+
+      width: 0%;
+      height: 2px;
+
+      background-color: #fff;
+
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover::after {
+      width: 90%;
+      z-index: 1;
+    }
   }
 }

@@ -6,9 +6,112 @@
 
   @include flex-box;
 
+  padding: 10rem;
+
   &__container {
+    max-width: 152rem;
+
     display: grid;
-    grid-template-columns: repeat(8, minmax(10rem, 1fr));
-    grid-template-rows: repeat(10, minmax(10rem, 1fr));
+    grid-template-columns: repeat(12, minmax(min-content, 8rem));
+    grid-template-rows: repeat(auto, minmax(10rem, 1fr));
+    gap: 3rem;
+
+    justify-items: center;
+  }
+
+  &__heading {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+
+    font-family: Josefin Sans;
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__box {
+    width: 100%;
+    height: 50rem;
+    border: 1px solid skyblue;
+
+    @include flex-box;
+    align-items: flex-end;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    &__name {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 4rem;
+      font-weight: 300;
+      line-height: 1;
+      text-transform: uppercase;
+
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+
+      padding: 3rem 4rem;
+    }
+
+    &-1 {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+
+      background-image: url(/images/desktop/image-deep-earth.jpg);
+    }
+
+    &-2 {
+      grid-column: 4 / 7;
+      grid-row: 2 / 3;
+
+      background-image: url(/images/desktop/image-night-arcade.jpg);
+    }
+
+    &-3 {
+      grid-column: 7 / 10;
+      grid-row: 2 / 3;
+
+      background-image: url(/images/desktop/image-soccer-team.jpg);
+    }
+
+    &-4 {
+      grid-column: 10 / -1;
+      grid-row: 2 / 3;
+
+      background-image: url(/images/desktop/image-grid.jpg);
+    }
+
+    &-5 {
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+
+      background-image: url(/images/desktop/image-from-above.jpg);
+    }
+
+    &-6 {
+      grid-column: 4 / 7;
+      grid-row: 3 / 4;
+
+      background-image: url(/images/desktop/image-pocket-borealis.jpg);
+    }
+
+    &-7 {
+      grid-column: 7 / 10;
+      grid-row: 3 / 4;
+
+      background-image: url(/images/desktop/image-curiosity.jpg);
+    }
+
+    &-8 {
+      grid-column: 10 / -1;
+      grid-row: 3 / 4;
+
+      background-image: url(/images/desktop/image-fisheye.jpg);
+    }
   }
 }
