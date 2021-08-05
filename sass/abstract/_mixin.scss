@@ -1,0 +1,15 @@
+/** @format */
+
+@mixin flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-8c {
+  display: grid;
+  grid-template-columns:
+    minmax(10rem, 20rem) repeat(8, minmax(min-content, 5rem))
+    minmax(10rem, 20rem);
+  grid-template-rows: repeat(8, 1fr);
+}
