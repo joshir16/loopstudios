@@ -2,14 +2,14 @@
 
 .interactivity {
   width: 100%;
-  height: 85vh;
+  height: 75vh;
 
   @include flex-box;
 
   &__box {
     display: grid;
     max-width: 152rem;
-    min-height: 80%;
+    min-height: 75%;
     grid-template-columns: repeat(8, minmax(min-content, 15rem));
     grid-template-rows: repeat(6, 1fr);
   }
@@ -30,11 +30,10 @@
 
     background-color: #fff;
 
-    @include flex-box;
+    display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
-
-    padding-left: 10rem;
 
     &__heading {
       font-family: Josefin Sans;
@@ -42,13 +41,17 @@
       font-weight: 300;
       line-height: 1.2;
       text-transform: uppercase;
-      max-width: 50rem;
+
+      max-width: 55rem;
     }
 
     &__para {
       font-family: "Alata", sans-serif;
       font-size: 2rem;
-      align-self: flex-end;
+      padding-top: 2rem;
+      color: #555;
+
+      max-width: 55rem;
     }
   }
 }

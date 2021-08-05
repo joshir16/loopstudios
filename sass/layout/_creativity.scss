@@ -1,0 +1,14 @@
+/** @format */
+
+.creative {
+  width: 100%;
+  height: auto;
+
+  @include flex-box;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(10rem, 1fr));
+    grid-template-rows: repeat(10, minmax(10rem, 1fr));
+  }
+}
