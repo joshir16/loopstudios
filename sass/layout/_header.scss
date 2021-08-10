@@ -11,7 +11,11 @@
 
   position: relative;
 
-  @include grid-8c;
+  display: grid;
+  grid-template-columns:
+    minmax(5rem, 1fr) repeat(8, minmax(min-content, 5rem))
+    minmax(5rem, 1fr);
+  grid-template-rows: repeat(8, 1fr);
 
   &__heading {
     max-width: 60rem;
@@ -28,5 +32,15 @@
   padding: 4rem;
   width: 70rem;
   height: 35rem;
+
   border: 1px solid #fff;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 3 / 6;
+
+    width: 55rem;
+    height: 40rem;
+
+    padding: 2rem;
+  }
 }

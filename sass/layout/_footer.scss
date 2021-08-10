@@ -8,12 +8,27 @@
 
   @include flex-box;
   flex-direction: column;
+  padding: 6rem 20rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 5rem 10rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem;
+    height: auto;
+  }
 
   &__box {
-    width: 120rem;
+    width: 100%;
 
     @include flex-box;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      flex-direction: column;
+    }
 
     &:not(:last-child) {
       margin-bottom: 3rem;
@@ -23,6 +38,10 @@
   &__logo {
     width: 15rem;
     height: auto;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__icons {
@@ -30,20 +49,33 @@
 
     @include flex-box;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 30rem;
+    }
   }
 
   &-nav {
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 3rem;
+    }
+
     &__list {
       @include flex-box;
     }
 
     &__item {
       list-style: none;
+
       &:not(:last-child) {
         margin-right: 1.5rem;
 
         @media only screen and (max-width: $bp-large) {
-          margin-right: 0.5rem;
+          margin-right: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+          margin-right: 2rem;
         }
       }
     }
@@ -82,9 +114,9 @@
 
   &__rights {
     font-family: "Alata", sans-serif;
-
     font-size: 1.4rem;
     font-weight: 300;
+
     color: rgba(255, 255, 255, 0.5);
     letter-spacing: 1px;
   }

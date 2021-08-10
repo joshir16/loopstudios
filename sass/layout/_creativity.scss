@@ -1,12 +1,20 @@
 /** @format */
 
 .creative {
+  height: auto;
+
   display: grid;
   grid-template-columns: repeat(8, minmax(min-content, 1fr));
-  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(3, min-content);
   gap: 5rem;
 
   padding: 10rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    grid-template-rows: repeat(3, min-content);
+  }
 
   &__heading {
     grid-column: 2 / 7;
@@ -20,6 +28,10 @@
 
     @media only screen and (max-width: $bp-huge) {
       grid-column: 1 / 8;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
     }
   }
 
@@ -36,6 +48,15 @@
     @media only screen and (max-width: $bp-huge) {
       grid-column: 1 / -1;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 20rem);
+      gap: 2.5rem;
+    }
   }
 
   &__box {
@@ -51,6 +72,11 @@
 
     position: relative;
 
+    @media only screen and (max-width: $bp-small) {
+      height: 20rem;
+      justify-content: flex-start;
+    }
+
     &__name {
       font-family: "Josefin Sans", sans-serif;
       font-size: 4rem;
@@ -63,38 +89,76 @@
       color: #fff;
 
       padding: 3rem 4rem;
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: left;
+        padding: 2rem;
+        width: 25rem;
+      }
     }
 
     &-1 {
-      background-image: url(/images/desktop/image-deep-earth.jpg);
+      background-image: url(../images/desktop/image-deep-earth.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-deep-earth.jpg);
+      }
     }
 
     &-2 {
-      background-image: url(/images/desktop/image-night-arcade.jpg);
+      background-image: url(../images/desktop/image-night-arcade.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-night-arcade.jpg);
+      }
     }
 
     &-3 {
-      background-image: url(/images/desktop/image-soccer-team.jpg);
+      background-image: url(../images/desktop/image-soccer-team.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-soccer-team.jpg);
+      }
     }
 
     &-4 {
-      background-image: url(/images/desktop/image-grid.jpg);
+      background-image: url(../images/desktop/image-grid.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-grid.jpg);
+      }
     }
 
     &-5 {
-      background-image: url(/images/desktop/image-from-above.jpg);
+      background-image: url(../images/desktop/image-from-above.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-from-above.jpg);
+      }
     }
 
     &-6 {
-      background-image: url(/images/desktop/image-pocket-borealis.jpg);
+      background-image: url(../images/desktop/image-pocket-borealis.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-pocket-borealis.jpg);
+      }
     }
 
     &-7 {
-      background-image: url(/images/desktop/image-curiosity.jpg);
+      background-image: url(../images/desktop/image-curiosity.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-curiosity.jpg);
+      }
     }
 
     &-8 {
-      background-image: url(/images/desktop/image-fisheye.jpg);
+      background-image: url(../images/desktop/image-fisheye.jpg);
+
+      @media only screen and (max-width: $bp-small) {
+        background-image: url(../images/mobile/image-fisheye.jpg);
+      }
     }
   }
 
@@ -104,6 +168,11 @@
 
     @media only screen and (max-width: $bp-huge) {
       grid-column: 8 / -1;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      grid-row: 3 / -1;
     }
 
     width: 16rem;

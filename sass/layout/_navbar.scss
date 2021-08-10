@@ -1,37 +1,54 @@
 /** @format */
 
-.navigation {
+.navbar {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 6rem;
+  right: 20rem;
 
   z-index: 1000;
-  width: 100%;
-  padding: 6rem 20rem;
-
-  @include flex-box;
-  justify-content: space-between;
 
   @media only screen and (max-width: $bp-huge) {
-    padding: 5rem 10rem;
+    top: 5rem;
+    right: 10rem;
   }
   @media only screen and (max-width: $bp-largest) {
-    padding: 5rem 7rem;
+    top: 5rem;
+    right: 7rem;
   }
-}
 
-.navbar {
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
+
   &__list {
+    display: inline-block;
     @include flex-box;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   &__item {
     list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 7rem;
+    }
+
     &:not(:last-child) {
       margin-right: 5rem;
 
       @media only screen and (max-width: $bp-large) {
         margin-right: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-right: 0;
+        margin-bottom: 3rem;
       }
     }
   }
@@ -43,6 +60,12 @@
     color: #fff;
     text-decoration: none;
     padding: 0.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
 
     position: relative;
 
@@ -66,4 +89,46 @@
       z-index: 1;
     }
   }
+}
+
+.checkbox {
+  display: none;
+
+  &-label {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 6rem;
+    right: 7rem;
+    z-index: 10001;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0.2rem;
+
+    background-image: url(../images/icon-hamburger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+    }
+  }
+}
+
+.checkbox:checked ~ .navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.checkbox:checked ~ .checkbox-label {
+  background-image: url(../images/icon-close.svg);
 }
