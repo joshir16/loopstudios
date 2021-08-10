@@ -39,7 +39,6 @@
   }
 
   &__box {
-    // width: 30rem;
     height: 50rem;
     border: 1px solid skyblue;
 
@@ -67,58 +66,34 @@
     }
 
     &-1 {
-      // grid-column: 1 / 2;
-      // grid-row: 2 / 3;
-
       background-image: url(/images/desktop/image-deep-earth.jpg);
     }
 
     &-2 {
-      // grid-column: 2 / 3;
-      // grid-row: 2 / 3;
-
       background-image: url(/images/desktop/image-night-arcade.jpg);
     }
 
     &-3 {
-      // grid-column: 3 / 4;
-      // grid-row: 2 / 3;
-
       background-image: url(/images/desktop/image-soccer-team.jpg);
     }
 
     &-4 {
-      // grid-column: 4 / 5;
-      // grid-row: 2 / 3;
-
       background-image: url(/images/desktop/image-grid.jpg);
     }
 
     &-5 {
-      // grid-column: 1 / 2;
-      // grid-row: 3 / 4;
-
       background-image: url(/images/desktop/image-from-above.jpg);
     }
 
     &-6 {
-      // grid-column: 2 / 3;
-      // grid-row: 3 / 4;
-
       background-image: url(/images/desktop/image-pocket-borealis.jpg);
     }
 
     &-7 {
-      // grid-column: 3 / 4;
-      // grid-row: 3 / 4;
-
       background-image: url(/images/desktop/image-curiosity.jpg);
     }
 
     &-8 {
-      // grid-column: 4 / 5;
-      // grid-row: 3 / 4;
-
       background-image: url(/images/desktop/image-fisheye.jpg);
     }
   }
@@ -143,6 +118,8 @@
     letter-spacing: 0.5rem;
     font-size: 1.4rem;
     text-transform: uppercase;
+
+    cursor: pointer;
 
     transition: all 0.2s ease;
 
